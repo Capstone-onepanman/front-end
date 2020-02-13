@@ -134,50 +134,40 @@ export default {
         text: 'Home'
       },
       {
-        to: '/user-profile',
         icon: 'mdi-account',
-        text: 'Game'
+        text: 'Game',
+        children: [
+          {
+            to: '/hi',
+            icon: 'mdi-map-marker',
+            text: 'Problems'
+          },
+          {
+            to: '/maps',
+            icon: 'mdi-bell',
+            text: 'Fight'
+          },
+          {
+            to: '/notifications',
+            icon: 'mdi-heart',
+            text: 'Replay'
+          }
+        ]
       },
       {
         to: '/table-list',
         icon: 'mdi-clipboard-outline',
-        text: 'Table List'
+        text: 'Ranking'
       },
       {
         to: '/typography',
         icon: 'mdi-format-font',
-        text: 'Typography'
+        text: 'Community'
       },
       {
         to: '/icons',
         icon: 'mdi-chart-bubble',
-        text: 'Icons'
-      },
-      {
-        to: '/maps',
-        icon: 'mdi-map-marker',
-        text: 'Maps'
-      },
-      {
-        to: '/notifications',
-        icon: 'mdi-bell',
-        text: 'Notifications'
-      },
-      {
-        icon: 'mdi-bell',
-        text: 'Hi',
-        children: [
-          {
-            to: '/hi/ji',
-            icon: 'mdi-bell',
-            text: 'HiHi'
-          },
-          {
-            to: '/hi/hello',
-            icon: 'mdi-bell',
-            text: 'Hello'
-          }
-        ]
+        text: 'Help'
       }
     ],
     responsive: false
