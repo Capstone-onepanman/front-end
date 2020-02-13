@@ -6,6 +6,7 @@
     dark
     floating
     persistent
+    disable-route-watcher
     mobile-break-point="991"
     width="260"
   >
@@ -57,7 +58,6 @@
                 <v-list-tile
                   :active-class="color"
                   avatar
-                  class="v-list-item"
                 >
                   <v-list-tile-action>
                     <v-icon> {{ link.icon }} </v-icon>
@@ -89,7 +89,6 @@
               :to="link.to"
               :active-class="color"
               avatar
-              class="v-list-item"
             >
               <v-list-tile-action>
                 <v-icon>{{ link.icon }}</v-icon>
@@ -170,6 +169,7 @@ export default {
         text: 'Help'
       }
     ],
+    clipped: true,
     responsive: false
   }),
   computed: {
