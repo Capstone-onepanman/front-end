@@ -6,43 +6,46 @@
 export default [
   {
     path: '/home',
+    name: 'Home',
     // Relative to /src/views
     view: 'Home'
   },
   {
-    path: '/user-profile',
-    name: 'User Profile',
-    view: 'UserProfile'
+    path: '/game',
+    name: 'Game',
+    view: 'Game'
   },
   {
-    path: '/table-list',
-    name: 'Table List',
-    view: 'TableList'
+    path: '/ranking',
+    name: 'Ranking',
+    view: 'Ranking'
   },
   {
-    path: '/typography',
-    view: 'Typography'
+    path: '/community',
+    view: 'Community'
   },
   {
-    path: '/icons',
-    view: 'Icons'
+    path: '/help',
+    view: 'Help'
   },
   {
-    path: '/maps',
-    view: 'Maps'
+    path: '/game/problems',
+    view: 'Problems',
+    name: 'Problems'
   },
   {
-    path: '/notifications',
-    view: 'Notifications'
+    path: '/game/problems/problemIdx:idx',
+    view: 'Solutions',
+    name: 'Solutions'
   },
   {
-    path: '/upgrade',
-    name: 'Upgrade to PRO',
-    view: 'Upgrade'
+    path: '/game/fight',
+    name: 'Fight',
+    view: 'Fight'
   },
   {
-    path: '/hi',
-    name: 'Hi',
-    view: 'Hi'
+    path: '/game/replay',
+    name: 'Replay',
+    view: 'Replay'
   }
 ]

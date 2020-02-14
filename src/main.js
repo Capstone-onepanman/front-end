@@ -28,6 +28,7 @@ import './plugins'
 
 // Sync router with store
 import { sync } from 'vuex-router-sync'
+import VueCodeMirror from 'vue-codemirror-lite'
 
 // Application imports
 import App from './App'
@@ -39,6 +40,7 @@ import store from '@/store'
 sync(store, router)
 
 Vue.config.productionTip = false
+Vue.component('codemirror', VueCodeMirror.codemirror)
 
 /* eslint-disable no-new */
 new Vue({

@@ -2,4 +2,7 @@
 
 export default {
   //
+  SET_PROBLEM_IDX (state, problemIdx) {
+    state.problemIdx = problemIdx
+  }
 }

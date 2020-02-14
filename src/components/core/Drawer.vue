@@ -128,43 +128,44 @@ export default {
     logo: './img/vuetifylogo.png',
     links: [
       {
-        to: '/dashboard',
+        to: '/home',
         icon: 'mdi-view-dashboard',
         text: 'Home'
       },
       {
         icon: 'mdi-account',
         text: 'Game',
+        to: '/game',
         children: [
           {
-            to: '/hi',
+            to: '/game/problems',
             icon: 'mdi-map-marker',
             text: 'Problems'
           },
           {
-            to: '/maps',
+            to: '/game/fight',
             icon: 'mdi-bell',
             text: 'Fight'
           },
           {
-            to: '/notifications',
-            icon: 'mdi-heart',
+            to: '/game/replay',
+            icon: 'replay',
             text: 'Replay'
           }
         ]
       },
       {
-        to: '/table-list',
+        to: '/ranking',
         icon: 'mdi-clipboard-outline',
         text: 'Ranking'
       },
       {
-        to: '/typography',
+        to: '/community',
         icon: 'mdi-format-font',
         text: 'Community'
       },
       {
-        to: '/icons',
+        to: '/help',
         icon: 'mdi-chart-bubble',
         text: 'Help'
       }
