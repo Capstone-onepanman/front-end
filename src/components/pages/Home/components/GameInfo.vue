@@ -1,27 +1,44 @@
 <template>
   <div class="gameInfo">
-    <button
-      :disabled="n <= 0"
-      @click="n--">
-      <i class="fas fa-heart"/>
-    </button>
-    <h1> {{ gameInfo[n].title }} </h1>
-    <router-link
-      :to="`game/problems/problemIdx${ gameInfo[n].idx }`">
-      <img
-        :src="gameInfo[n].image"
-        class="gameImage"
-        @click="this.$store.state.problemIdx=gameInfo[n].idx">
-    </router-link>
-    <button
-      :disabled="n >= gameInfo.length - 1"
-      @click="n++"
-    > right </button>
+    <v-container>
+      <v-layout
+        row
+        wrap
+        align-center
+        justify-space-around
+        fill-height>
+        <v-btn
+          :disabled="n <= 0"
+          icon
+          @click="n--">
+          <v-icon
+            large
+            color="pink">mdi-arrow-left-drop-circle</v-icon>
+        </v-btn>
+        <h1> {{ gameInfo[n].title }} </h1>
+        <router-link
+          :to="`game/problems/problemIdx${ gameInfo[n].idx }`">
+          <img
+            :src="gameInfo[n].image"
+            class="gameImage"
+            @click="this.$store.state.problemIdx=gameInfo[n].idx">
+        </router-link>
+        <v-btn
+          :disabled="n >= gameInfo.length - 1"
+          icon
+          @click="n++">
+          <v-icon
+            large
+            color="pink">mdi-arrow-right-drop-circle</v-icon>
+        </v-btn>
+      </v-layout>
+    </v-container>
   </div>
 </template>
 
 <script>
 export default {
+  name: 'GameInfo',
   data () {
     return {
       n: 0,
@@ -43,5 +60,8 @@ export default {
 </script>
 
 <style scoped>
-
+.gameImage{
+  height: 300px;
+  width: 300px;
+}
 </style>

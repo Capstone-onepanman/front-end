@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <game-info/>>
+    <game-info/>
   </div>
 </template>
 
