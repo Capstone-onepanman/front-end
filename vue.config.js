@@ -2,5 +2,5 @@ module.exports = {
   devServer: {
     disableHostCheck: true
   },
-  publicPath: '/vuetify-material-dashboard/'
-};
+  publicPath: '/One-Pan-Man/'
+}
