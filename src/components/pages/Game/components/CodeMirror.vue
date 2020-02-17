@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <h1>CodeMirror Editor</h1>
+    <h1>{{ problemIdx }} CodeMirror Editor</h1>
     <main
       v-cloak
       id="edit">
@@ -42,6 +42,10 @@ export default {
     }
   },
   computed: {
+    problemIdx () {
+      const problemIdx = this.$store.state.problemIdx
+      return problemIdx
+    },
     code () {
       return this.codes[this.mode]
     },
@@ -55,10 +59,9 @@ export default {
         extraKeys: { 'Ctrl-Space': 'autocomplete' } }
     }
   },
-  mounted () {
-    // use editor object...
-    // eslint-disable-next-line no-console
-    console.log('this is current editor object', this.editor)
+  created () {
+    const problemIdx = this.$route.params.idx
+    this.$store.dispatch('FETCH_PROBLEM_IDX', problemIdx)
   }
 }
 </script>

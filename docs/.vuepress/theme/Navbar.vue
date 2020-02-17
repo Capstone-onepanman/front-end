@@ -85,7 +85,7 @@ import {
       SearchBox
     },
     data: () => ({
-      title: 'Vuetify Material Dashboard',
+      title: 'One Pan Man',
       responsive: false,
       responsiveLink: true,
       version: '2.0.0',

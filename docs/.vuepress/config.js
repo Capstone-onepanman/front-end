@@ -1,8 +1,8 @@
 const markdownParser = require('./markdownParser')
 const path = require('path');
 module.exports = {
-  title: 'Vuetify Material Dashboard',
-  base: '/vuetify-material-dashboard/documentation/',
+  title: 'One Pan Man',
+  base: '/One Pan Man/documentation/',
   markdown: {
     config: markdownParser
   },
@@ -13,7 +13,7 @@ module.exports = {
     ['link', { rel: 'stylesheet', href: `https://fonts.googleapis.com/icon?family=Material+Icons` }],
     ['link', { rel: 'stylesheet', href: `https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons` }],
     ['link', { rel: 'stylesheet', href: `https://use.fontawesome.com/releases/v5.4.1/css/all.css` }],
-    ['link', { rel: 'icon', type: 'image/png', sizes: '96x96', href: '/favicon.png' }]
+    ['link', { rel: 'icon', type: 'image/png', sizes: '96x96', href: 'favicon.png' }]
   ],
   themeConfig: {
     nav: [
