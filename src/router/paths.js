@@ -47,5 +47,10 @@ export default [
     path: '/game/replay',
     name: 'Replay',
     view: 'Replay'
+  },
+  {
+    path: '/userprofile',
+    name: 'UserProfile',
+    view: 'UserProfile'
   }
 ]

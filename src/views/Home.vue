@@ -11,6 +11,9 @@ export default {
   name: 'Home',
   components: {
     HomePage
+  },
+  created () {
+    console.log('homehomehome sweet home')
   }
 }
 </script>

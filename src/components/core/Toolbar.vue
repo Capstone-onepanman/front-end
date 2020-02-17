@@ -30,19 +30,12 @@
         layout
         py-2
       >
-        <v-text-field
-          v-if="responsiveInput"
-          class="mr-4 mt-2 purple-input"
-          label="Search..."
-          hide-details
-          color="purple"
-        />
         <router-link
           v-ripple
           class="toolbar-items"
           to="/"
         >
-          <v-icon color="tertiary">mdi-view-dashboard</v-icon>
+          <v-icon color="tertiary">home</v-icon>
         </router-link>
         <v-menu
           bottom
@@ -83,7 +76,7 @@
         <router-link
           v-ripple
           class="toolbar-items"
-          to="/user-profile"
+          to="/userprofile"
         >
           <v-icon color="tertiary">mdi-account</v-icon>
         </router-link>

@@ -2,8 +2,8 @@
   <div class="problems">
     <ul>
       <li
-        v-for="idx in problemsSrc"
-        :key="idx"
+        v-for="(idx, i) in problemsSrc"
+        :key="i"
         :to="`problems/problemIdx01`">
         <router-link
           :to="`problems/problemIdx${ idx.id }`">

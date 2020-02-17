@@ -129,22 +129,22 @@ export default {
     links: [
       {
         to: '/home',
-        icon: 'mdi-view-dashboard',
+        icon: 'home',
         text: 'Home'
       },
       {
-        icon: 'mdi-account',
+        icon: 'mdi-gamepad-variant-outline',
         text: 'Game',
         to: '/game',
         children: [
           {
             to: '/game/problems',
-            icon: 'mdi-map-marker',
+            icon: 'mdi-head-question-outline',
             text: 'Problems'
           },
           {
             to: '/game/fight',
-            icon: 'mdi-bell',
+            icon: 'mdi-sword-cross',
             text: 'Fight'
           },
           {
@@ -156,17 +156,17 @@ export default {
       },
       {
         to: '/ranking',
-        icon: 'mdi-clipboard-outline',
+        icon: 'mdi-crown-outline',
         text: 'Ranking'
       },
       {
         to: '/community',
-        icon: 'mdi-format-font',
+        icon: 'mdi-account-group',
         text: 'Community'
       },
       {
         to: '/help',
-        icon: 'mdi-chart-bubble',
+        icon: 'mdi-help-circle',
         text: 'Help'
       }
     ],
