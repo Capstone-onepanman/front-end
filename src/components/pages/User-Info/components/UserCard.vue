@@ -3,7 +3,7 @@
     class="mx-auto"
     color="#26c6da"
     dark
-    max-width="500"
+    width="520"
   >
     <v-card-title>
       <v-list-tile-avatar
@@ -48,13 +48,12 @@
           wrap
           align-center
           row>
-        <v-flex>Language:</v-flex>
-        <v-flex xs4>
+        <v-flex md4>
           <v-select
-            min-width="100"
             :items="languages"
             label="Languages"
-            autowidth/>
+            single-line
+            class="lang"/>
         </v-flex>
       </v-layout>
       <form>
@@ -147,6 +146,8 @@ export default {
 }
 </script>
 
-<style>
-
+<style scoped>
+.lang{
+  max-width: 100px;
+}
 </style>
