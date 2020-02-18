@@ -26,7 +26,7 @@
           >
             <v-img
               :src="logo"
-              height="34"
+              height="45"
               contain
             />
           </v-list-tile-avatar>
@@ -125,7 +125,7 @@ import {
 
 export default {
   data: () => ({
-    logo: './img/vuetifylogo.png',
+    logo: 'favicon2.png',
     links: [
       {
         to: '/home',
