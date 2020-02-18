@@ -1,16 +1,16 @@
 <template>
-  <div class="userInfo">
-    <user-info/>
+  <div class="userPage">
+    <profile/>
   </div>
 </template>
 
 <script>
-import UserInfo from '../components/pages/User-Info/UserInfo.vue'
+import Profile from '../components/pages/User-Info/Profile.vue'
 
 export default {
-  name: 'UserProfile',
+  name: 'UserPage',
   components: {
-    UserInfo
+    Profile
   }
 }
 </script>

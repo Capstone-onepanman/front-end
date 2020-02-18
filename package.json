@@ -18,6 +18,7 @@
     "vue-chartist": "^2.1.2",
     "vue-codemirror-lite": "^1.0.4",
     "vue-meta": "^1.5.2",
+    "vuelidate": "^0.7.5",
     "vuetify": "^1.2.9"
   },
   "devDependencies": {

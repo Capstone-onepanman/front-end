@@ -42,6 +42,7 @@ export default {
 }
 .image{
   width: 300px;
+  height: 300px;
   list-style-image: none;
 }
 </style>
