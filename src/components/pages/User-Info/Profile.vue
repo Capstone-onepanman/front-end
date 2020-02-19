@@ -1,7 +1,7 @@
 <template>
   <div class="profile">
       <v-container>
-            <user-card/>
+            <user-card class="card"/>
             <v-layout
                 row
                 wrap
@@ -38,5 +38,8 @@ export default {
 </script>
 
 <style>
-
+.card{
+    left: -500px;
+    position: fixed;
+}
 </style>

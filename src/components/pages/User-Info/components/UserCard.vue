@@ -3,6 +3,7 @@
     class="mx-auto"
     color="#26c6da"
     dark
+    elevation="20"
     width="520"
   >
     <v-card-title>

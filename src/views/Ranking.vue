@@ -12,13 +12,63 @@
         md12
       >
         <material-card
-          color="green"
-          title="Simple Table"
-          text="Here is a subtitle for this table"
+          color="orange"
+          title="개인별 랭킹"
         >
           <v-data-table
             :headers="headers"
             :items="items"
+          >
+            <template
+              slot="headerCell"
+              slot-scope="{ header }"
+            >
+              <span
+                class="subheading font-weight-light text-success text--darken-3"
+                v-text="header.text"
+              />
+            </template>
+            <template
+              slot="items"
+              slot-scope="{ item }"
+            >
+              <td class="text-xs-center">{{ item.ranking }}</td>
+              <td>{{ item.nickName }}</td>
+              <td width="250">{{ item.group }}</td>
+              <td> 
+                <v-layout row>
+                  <v-flex>
+                    <v-img src="Challenger.png" class="tier"/> {{ item.tier.Challenger }}
+                  </v-flex>
+                  <v-flex>
+                    <v-img src="Platinum.png" class="tier"/> {{ item.tier.Platinum }}
+                  </v-flex>
+                  <v-flex>
+                    <v-img src="Gold.png" class="tier"/> {{ item.tier.Gold }}
+                  </v-flex>
+                  <v-flex>
+                    <v-img src="Silver.png" class="tier"/> {{ item.tier.Silver }}
+                  </v-flex>
+                  <v-flex>
+                    <v-img src="Bronze.png" class="tier"/> {{ item.tier.Bronze }}
+                    </v-flex>
+                </v-layout>
+              </td>  
+            </template>
+          </v-data-table>
+        </material-card>
+      </v-flex>
+      <v-flex
+        md12
+      >
+        <material-card
+          color="orange"
+          width="500"
+          title="Game 01"
+        >
+          <v-data-table
+            :headers="headers2"
+            :items="items.slice(0, 7)"
             hide-actions
           >
             <template
@@ -34,46 +84,9 @@
               slot="items"
               slot-scope="{ item }"
             >
-              <td>{{ item.name }}</td>
-              <td>{{ item.country }}</td>
-              <td>{{ item.city }}</td>
-              <td class="text-xs-right">{{ item.salary }}</td>
-            </template>
-          </v-data-table>
-        </material-card>
-      </v-flex>
-      <v-flex
-        md12
-      >
-        <material-card
-          color="green"
-          flat
-          full-width
-          title="Table on Plain Background"
-          text="Here is a subtitle for this table"
-        >
-          <v-data-table
-            :headers="headers"
-            :items="items.slice(0, 7)"
-            hide-actions
-          >
-            <template
-              slot="headerCell"
-              slot-scope="{ header }"
-            >
-              <span
-                class="subheading font-weight-light text--darken-3"
-                v-text="header.text"
-              />
-            </template>
-            <template
-              slot="items"
-              slot-scope="{ item }"
-            >
-              <td>{{ item.name }}</td>
-              <td>{{ item.country }}</td>
-              <td>{{ item.city }}</td>
-              <td class="text-xs-right">{{ item.salary }}</td>
+              <td class="text-xs-center">{{ item.ranking }}</td>
+              <td>{{ item.nickName }}</td>
+              <td>{{ item.group }}</td>
             </template>
           </v-data-table>
         </material-card>
@@ -87,61 +100,88 @@ export default {
   data: () => ({
     headers: [
       {
-        sortable: false,
-        text: 'Name',
-        value: 'name'
+        sortable: true,
+        text: 'Ranking',
+        value: 'ranking',
+        align: 'center',
+        width: '300'
       },
       {
         sortable: false,
-        text: 'Country',
-        value: 'country'
+        text: 'Nick Name',
+        value: 'nickName'
       },
       {
         sortable: false,
-        text: 'City',
-        value: 'city'
+        text: 'Group',
+        value: 'group'
       },
       {
         sortable: false,
-        text: 'Salary',
-        value: 'salary',
-        align: 'right'
+        text: 'Tier',
+        value: 'tier'
+      }
+    ],
+    headers2: [
+      {
+        sortable: true,
+        text: 'Ranking',
+        value: 'ranking',
+        align: 'center',
+        width: '150'
+      },
+      {
+        sortable: false,
+        text: 'Nick Name',
+        value: 'nickName'
+      },
+      {
+        sortable: false,
+        text: 'Group',
+        value: 'group'
       }
     ],
     items: [
       {
-        name: 'Dakota Rice',
-        country: 'Niger',
-        city: 'Oud-Tunrhout',
-        salary: '$35,738'
+        nickName: 'Dakota Rice',
+        ranking: '1',
+        group: 'Oud-Tunrhout',
+        tier: {'Challenger': 5, 'Platinum': 5, 'Gold': 5, 'Silver': 5, 'Bronze': 5}
       },
       {
-        name: 'Minerva Hooper',
-        country: 'Curaçao',
-        city: 'Sinaai-Waas',
-        salary: '$23,738'
+        nickName: 'Minerva Hooper',
+        ranking: '3',
+        group: 'Sinaai-Waas',
+        tier: {'Challenger': 4, 'Platinum': 5, 'Gold': 5, 'Silver': 5, 'Bronze': 5}
       }, {
-        name: 'Sage Rodriguez',
-        country: 'Netherlands',
-        city: 'Overland Park',
-        salary: '$56,142'
+        nickName: 'Sage Rodriguez',
+        ranking: '4',
+        group: 'Overland Park',
+        tier: {'Challenger': 3, 'Platinum': 5, 'Gold': 5, 'Silver': 5, 'Bronze': 5}
       }, {
-        name: 'Philip Chanley',
-        country: 'Korea, South',
-        city: 'Gloucester',
-        salary: '$38,735'
+        nickName: 'Philip Chanley',
+        ranking: '2',
+        group: 'Gloucester',
+        tier: {'Challenger': 2, 'Platinum': 5, 'Gold': 5, 'Silver': 5, 'Bronze': 5}
       }, {
-        name: 'Doris Greene',
-        country: 'Malawi',
-        city: 'Feldkirchen in Kārnten',
-        salary: '$63,542'
+        nickName: 'Doris Greene',
+        ranking: '5',
+        group: 'Feldkirchen in Kārnten',
+        tier: {'Challenger': 1, 'Platinum': 5, 'Gold': 5, 'Silver': 5, 'Bronze': 5}
       }, {
-        name: 'Mason Porter',
-        country: 'Chile',
-        city: 'Gloucester',
-        salary: '$78,615'
+        nickName: 'Mason Porter',
+        ranking: '6',
+        group: 'Gloucester',
+        tier: {'Challenger': 0, 'Platinum': 5, 'Gold': 5, 'Silver': 5, 'Bronze': 5}
       }
     ]
   })
 }
 </script>
+<style>
+.tier{
+  left: -10px;
+  width: 30px;
+  height: 30px;
+}
+</style>
