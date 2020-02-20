@@ -31,7 +31,7 @@
               <v-avatar
                 v-for="c in colors"
                 :key="c"
-                :class="[c === color ? 'color-active color-' + c: 'color-' + c]"
+                :class="'color-active ' + setButtonColor(c)"
                 size="23"
 
                 @click="setColor(c)"
@@ -162,7 +162,24 @@ export default {
   methods: {
     ...mapMutations('app', ['setImage']),
     setColor (color) {
+      console.log(color)
       this.$store.state.app.color = color
+    },
+    setButtonColor (color) {
+      if (color === 'primary'){
+        return 'purple';
+      } else if (color === 'info'){
+        return 'blue';
+      } else if (color === 'success'){
+        return 'green';
+      } else if (color === 'warning'){
+        return 'orange';
+      } else if (color === 'danger'){
+        return 'red';
+      } else {
+        return 'black'
+      }
+
     }
   }
 }
