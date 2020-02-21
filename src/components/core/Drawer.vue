@@ -21,18 +21,13 @@
         column
       >
         <v-list-tile avatar>
-          <v-list-tile-avatar
-            color="white"
-          >
-            <v-img
-              :src="logo"
-              height="45"
-              contain
-            />
+          <v-list-tile-avatar>
+            <img src="https://randomuser.me/api/portraits/men/85.jpg">
           </v-list-tile-avatar>
-          <v-list-tile-title class="title">
-            Vuetify MD
-          </v-list-tile-title>
+
+          <v-list-tile-content>
+            <v-list-tile-title>John Leider</v-list-tile-title>
+          </v-list-tile-content>
         </v-list-tile>
         <v-divider/>
         <v-list-tile
@@ -214,6 +209,8 @@ export default {
   #app-drawer {
     .v-list__tile {
       border-radius: 4px;
+      padding: 10px;
+      margin: 10px;
 
       &--buy {
         margin-top: auto;

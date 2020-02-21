@@ -39,7 +39,6 @@ export default {
 
 <style>
 .card{
-    left: -500px;
-    position: fixed;
+    
 }
 </style>
