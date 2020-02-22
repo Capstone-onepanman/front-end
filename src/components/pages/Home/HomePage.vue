@@ -1,11 +1,11 @@
 <template>
   <div class="home">
-    <v-container class="homeBox">
+    <v-container>
       <v-layout
         row
         wrap
         align-center
-        justify-space-between
+        justify-space-around
         fill-height>
         <game-info/>
       </v-layout>
@@ -13,7 +13,7 @@
         row
         wrap
         align-center
-        justify-space-between
+        justify-space-around
         fill-height>
         <small-notice/>
         <small-profile/>
@@ -22,7 +22,7 @@
         row
         wrap
         align-center
-        justify-space-between
+        justify-space-around
         fill-height>
         <best-group/>
         <anything/>
@@ -56,7 +56,11 @@ export default {
       height: 100%;
     }
   }
-  .homeBox{
-    width: 1200px;
+  .home {
+    text-align: center;
+    .va-card {
+      margin-bottom: 0 !important;
+      text-align: center;
+    }
   }
 </style>

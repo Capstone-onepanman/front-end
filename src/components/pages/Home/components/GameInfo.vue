@@ -1,13 +1,12 @@
 <template>
   <div class="gameInfo">
-    <v-container class="sibar">
+    <v-container>
       <v-layout
         row
         wrap
         align-center
-        justify-space-between
+        justify-space-around
         fill-height>
-        <v-flex>
         <v-btn
           :disabled="n <= 0"
           icon
@@ -16,11 +15,7 @@
             large
             color="pink">mdi-arrow-left-drop-circle</v-icon>
         </v-btn>
-        </v-flex>
-        <v-flex>
         <h1> {{ gameInfo[n].title }} </h1>
-        </v-flex>
-        <v-flex>
         <router-link
           :to="`game/problems/problemIdx${ gameInfo[n].idx }`">
           <img
@@ -28,8 +23,6 @@
             class="gameImage"
             @click="this.$store.state.problemIdx=gameInfo[n].idx">
         </router-link>
-        </v-flex>
-        <v-flex>
         <v-btn
           :disabled="n >= gameInfo.length - 1"
           icon
@@ -38,7 +31,6 @@
             large
             color="pink">mdi-arrow-right-drop-circle</v-icon>
         </v-btn>
-        </v-flex>
       </v-layout>
     </v-container>
   </div>
@@ -68,15 +60,8 @@ export default {
 </script>
 
 <style scoped>
-.gameInfo{
-  width: 1000px;
-}
 .gameImage{
   height: 300px;
   width: 300px;
-}
-.sibar{
-  width: 1000px;
-  padding: 0px;
 }
 </style>
