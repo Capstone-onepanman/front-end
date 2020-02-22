@@ -12,7 +12,7 @@
         color="grey darken-3">
           <v-img
             class="elevation-6"
-            src="favicon2.png"
+            :src="require('../../../../../public/favicon2.png')"
           ></v-img>
         </v-list-tile-avatar>
     </v-card-title>

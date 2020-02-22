@@ -38,19 +38,19 @@
               <td> 
                 <v-layout row>
                   <v-flex>
-                    <v-img src="Challenger.png" class="tier"/> {{ item.tier.Challenger }}
+                    <v-img :src="require('../../public/Challenger.png')" class="tier"/> {{ item.tier.Challenger }}
                   </v-flex>
                   <v-flex>
-                    <v-img src="Platinum.png" class="tier"/> {{ item.tier.Platinum }}
+                    <v-img :src="require('../../public/Platinum.png')" class="tier"/> {{ item.tier.Platinum }}
                   </v-flex>
                   <v-flex>
-                    <v-img src="Gold.png" class="tier"/> {{ item.tier.Gold }}
+                    <v-img :src="require('../../public/Gold.png')" class="tier"/> {{ item.tier.Gold }}
                   </v-flex>
                   <v-flex>
-                    <v-img src="Silver.png" class="tier"/> {{ item.tier.Silver }}
+                    <v-img :src="require('../../public/Silver.png')" class="tier"/> {{ item.tier.Silver }}
                   </v-flex>
                   <v-flex>
-                    <v-img src="Bronze.png" class="tier"/> {{ item.tier.Bronze }}
+                    <v-img :src="require('../../public/Bronze.png')" class="tier"/> {{ item.tier.Bronze }}
                     </v-flex>
                 </v-layout>
               </td>  
